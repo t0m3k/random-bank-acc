@@ -11,7 +11,10 @@
 `python rand_bank_acc.py -c 10 -a 100 -f bank_accounts.csv`
 
 # Docker 
+## Create docker image
+
 `docker build -t bankacc .`
 
-Create 5 sort codes with 10 accounts each inside docker container
-`docker run --name test2 bankacc -c 5 -a 10`
+## Create 5 sort codes with 10 accounts each inside docker container in file `/accounts.csv`
+
+`docker run --name test bankacc -c 5 -a 10`
