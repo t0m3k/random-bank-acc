@@ -1,10 +1,9 @@
 import csv
 from random_uk_bank_account import GenerateUkBankAccount
-from sort_code_from_csv import random_sort_code
-from params import get_params
+from functions import random_sort_code, get_params
 
 
-class RandomSortCodes:
+class BankAccounts:
     def __init__(self, sort_code_qty, bank_account_qty):
         self.sort_code_qty = sort_code_qty
         self.bank_account_qty = bank_account_qty
@@ -39,6 +38,6 @@ class RandomSortCodes:
 if __name__ == "__main__":
     codes, accounts, file = get_params()
 
-    random_sort_codes = RandomSortCodes(codes, accounts)
+    random_sort_codes = BankAccounts(codes, accounts)
     random_sort_codes.generate()
     random_sort_codes.save_to_csv(file)

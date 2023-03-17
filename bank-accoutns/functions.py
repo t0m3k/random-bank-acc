@@ -1,4 +1,17 @@
-import sys, getopt
+import sys, getopt, os, random, csv
+
+
+def random_sort_code():
+    sort_codes = read_csv()
+    return random.choice(sort_codes)[0:6]
+
+
+def read_csv():
+    with open(os.path.join(sys.path[0], "sort_codes.csv"), "r") as f:
+        reader = csv.reader(f)
+        next(reader)
+        return [row[0] for row in reader]
+
 
 def get_params():
     usage = "Usage: python rand_bank_acc.py -c <number of sort codes> -a <number of accounts per sort code> -f <file name to save>"
@@ -9,7 +22,7 @@ def get_params():
         print(usage)
         sys.exit(2)
 
-    codes = 100
+    codes = 10
     accounts = 50
     file = "accounts.csv"
 
