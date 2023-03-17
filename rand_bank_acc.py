@@ -35,5 +35,5 @@ def save_to_csv(data, file):
 
 if __name__ == "__main__":
     codes, accounts, file = get_params()
-    accounts = random_bank_accounts(100, 50)
-    save_to_csv(accounts, file)
+    generated_accounts = random_bank_accounts(codes, accounts)
+    save_to_csv(generated_accounts, file)
