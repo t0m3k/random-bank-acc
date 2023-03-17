@@ -6,9 +6,9 @@
 `pip3 install random-uk-bank-account`
 
 # Usage
-`python rand_bank_acc.py -c` \<number of sort codes> `-a` \<number of accounts per sort code> `-f` \<file name to save>
+`python bank-accounts -c` \<number of sort codes> `-a` \<number of accounts per sort code> `-f` \<file name to save>
 ## Example
-`python rand_bank_acc.py -c 10 -a 100 -f bank_accounts.csv`
+`python bank-accounts -c 10 -a 100 -f bank_accounts.csv`
 
 # Docker 
 ### Create docker image
