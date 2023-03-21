@@ -14,7 +14,7 @@ def read_csv():
 
 
 def get_params():
-    usage = "Usage: python rand_bank_acc.py -c <number of sort codes> -a <number of accounts per sort code> -f <file name to save>"
+    usage = "Usage: python bank-accounts -c <number of sort codes> -a <number of accounts per sort code> -f <file name to save>"
 
     try:
         opts, _ = getopt.getopt(sys.argv[1:], "hc:a:f:", ["help", "codes=", "accounts=", "file="])
